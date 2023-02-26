@@ -19,8 +19,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: AppDimensions().appHeight(context),
-      width: AppDimensions().appWidth(context),
+      height: Dimensions().appHeight(context),
+      width: Dimensions().appWidth(context),
       child: SafeArea(
           child: Column(
         children: [
