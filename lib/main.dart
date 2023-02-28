@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery_app/screens/main_screen.dart';
 import 'package:get/get.dart';
 import 'package:responsive_screen_utils/responsive_screen_utils.dart';
+import 'package:food_delivery_app/helpers/dependencies.dart' as dependencies;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dependencies.init();
   runApp(const MyApp());
 }
 

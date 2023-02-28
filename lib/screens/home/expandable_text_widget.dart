@@ -66,7 +66,7 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SmallText(
-                        text: 'Show more',
+                        text: hiddenText ? 'Show more' : 'Show less',
                         color: AppColors.mainColor,
                         size: ResponsiveScreenUtil().setSp(16),
                       ),

@@ -4,6 +4,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/screens/home/food_detail_page.dart';
+import 'package:food_delivery_app/screens/home/reccommended_food_detail.dart';
 import 'package:food_delivery_app/utils/app_colors.dart';
 import 'package:food_delivery_app/widgets/app_large_text.dart';
 import 'package:food_delivery_app/widgets/app_small_text.dart';
@@ -83,17 +84,22 @@ class _FoodPageState extends State<FoodPage> {
                 transform: _matrix,
                 child: Stack(
                   children: [
-                    Container(
-                      height: ResponsiveScreenUtil().setHeight(220),
-                      margin: const EdgeInsets.only(left: 10, right: 10),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: index.isEven
-                            ? Colors.pinkAccent
-                            : Colors.yellowAccent,
-                        image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('images/food09.jpg'),
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(() => const RecommendedFoodDetail());
+                      },
+                      child: Container(
+                        height: ResponsiveScreenUtil().setHeight(220),
+                        margin: const EdgeInsets.only(left: 10, right: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: index.isEven
+                              ? Colors.pinkAccent
+                              : Colors.yellowAccent,
+                          image: const DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage('images/food09.jpg'),
+                          ),
                         ),
                       ),
                     ),

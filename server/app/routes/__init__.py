@@ -1,8 +1,8 @@
 from flask import Blueprint
 
-home = Blueprint(__name__,url_prefix='/' , name='home')
+recommended_food_blueprint = Blueprint('recommended-food',__name__)
 
 
-@home.route('/')
-def homepage():
+@recommended_food_blueprint.route('/')
+def recommended_food():
     return 'Hello world'
